@@ -16,7 +16,7 @@ services:
       dockerfile: "Dockerfile"
     restart: on-failure
     ports:
-      - 9090:9090
+      - 9099:9099
     depends_on:
       - mysqldb
     stdin_open: true
