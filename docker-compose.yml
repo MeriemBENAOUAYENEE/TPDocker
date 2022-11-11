@@ -11,10 +11,13 @@ services:
       - /home/mysql/data:/var/lib/mysql
 
   spring_app:
-    image: benaouayene/project
-    container_name: benaouayene/project
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
     restart: on-failure
     ports:
       - 9090:9090
     depends_on:
       - mysqldb
+    stdin_open: true
+    tty: true
