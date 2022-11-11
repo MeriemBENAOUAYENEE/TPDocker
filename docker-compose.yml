@@ -11,8 +11,8 @@ services:
       - /home/mysql/data:/var/lib/mysql
 
   spring_app:
-    image: projet
-    container_name: projet
+    image: benaouayene/project
+    container_name: benaouayene/project
     restart: on-failure
     ports:
       - 9090:9090
